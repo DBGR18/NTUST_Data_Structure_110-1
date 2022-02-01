@@ -1,0 +1,4 @@
+﻿  HW5_1.cpp
+D:\NTUST Courses\資料結構\HW5\HW5-1\HW5_1.cpp(23,20): warning C4018: '<': signed/unsigned mismatch
+D:\NTUST Courses\資料結構\HW5\HW5-1\HW5_1.cpp(91,21): warning C4018: '<': signed/unsigned mismatch
+  HW5-1.vcxproj -> D:\NTUST Courses\資料結構\HW5\HW5-1\Debug\HW5-1.exe

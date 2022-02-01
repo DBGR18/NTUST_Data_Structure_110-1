@@ -1,0 +1,98 @@
+瓦基 the gardener
+Description
+
+Thanks to your help, 瓦基 has found the shortest path out of 魯拉拉's house. 
+However, when 瓦基 tries to go through 魯拉拉's garden, he is hindered by the overgrown Binary Search Trees.
+瓦基 must prune the BSTs ASAP so as to escape from 魯拉拉's house keepers. There are 5 operations that 瓦基 can do:
+
+Insertion: 瓦基 inserts a number, I, to the BST. Smaller numbers will be on the left. 
+If there are duplicated numbers, insert the latter one to the left subtree of the former one.
+
+Deletion: 瓦基 deletes a number, D, from the BST. If D has both left and right child nodes, 
+find the greatest number in the left subtree to replace D. 
+If D has only one child node, link the child node to its parent node. 
+If D does not have any child node, simply eliminate D . 
+If duplicated DDs are found in the tree, eliminate the one nearest to the root.
+
+Print: 瓦基 traverses the BST in preorder. 
+The traversal should be noted in format root(left__child_node()())(right_child_node()()).
+
+remove value with Least node: 瓦基 wants to make the total value of the BST at most VV, 
+please return the least number of nodes he needs to remove.
+
+remove value with Most node: 瓦基 wants to make the total value of the BST at least VV, 
+please return the most number of nodes he needs to remove.
+
+Please help 瓦基 estimate the result of certain commands.
+
+
+Input
+Each test case contains one BST only. The first line contains a positive integer N, the number of nodes of the initial BST, 
+where 1 ≤ N ≤ 50000 . The second line contains N integers a_1, a_2, ... , a_n which is the preorder list of the value of nodes 
+in the BST. Then, the test case contains M lines of commands, where 1 ≤ M ≤ 1000.
+
+I: The insertion command. The command is followed by an integer inputinput, the desired number to be inserted into the BST. 
+Please insert inputinput into the BST.
+
+D: The deletion command. The command is followed by an integer inputinput, the desired number to be deleted from the BST. 
+Please delete inputinput from the BST.
+
+P: The print command. Please print the BST in the format  root(left_child_node()())(right_child_node()()).
+
+L: The command estimates the least number of nodes that need to be removed. The command is followed by an integer Vmax, 
+the desired maximum total value of the tree. 
+Please output the least number of nodes that need to be removed to make the sum of the tree at most V.
+
+M: The command estimates the most number of nodes that can be removed. The command is followed by an integer Vmin, 
+the desired minimum total value of the tree. 
+Please output the most number of nodes that can be removed to make the sum of the tree at least V.
+
+Please note that the number of M will not be given, so the program should stop automatically upon EOF is read.
+
+Output
+Please print the results of the corresponding command line by line.
+
+Sample Input 1 
+
+7
+39 27 45 18 29 40 54
+P
+I 21
+I 46
+P
+D 27
+P
+D 45
+P
+D 40
+P
+
+Sample Output 1
+
+39(27(18()())(29()()))(45(40()())(54()()))
+39(27(18()(21()()))(29()()))(45(40()())(54(46()())()))
+39(21(18()())(29()()))(45(40()())(54(46()())()))
+39(21(18()())(29()()))(40()(54(46()())()))
+39(21(18()())(29()()))(54(46()())())
+
+Sample Input 2 
+
+7
+39 21 45 18 29 40 54
+I 27
+I 46
+L 273
+L 219
+L 218
+M 301
+M 250
+M 1
+
+Sample Output 2
+
+1
+2
+3
+1
+3
+8

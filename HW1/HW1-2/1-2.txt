@@ -1,0 +1,70 @@
+Answer decryption
+Description
+
+Professor Chen sent the midterm exam answers to Hank, the TA. 
+To prevent leakage, he encrypted the message with a secret algorithm. 
+To decrypt the cypher, Hank needs to use the following rules:
+
+n[s] will be decrypted as s repeated n times. n∈[1,300]. s only consists of 
+ASCII lowercase English letters.
+The symbol<means to swap its neighbor elements(a single character or a n[s] block).
+E.g. 2[apple]<2[cat] ->catcatappleapple, hi<2[oh]->hohohi
+The symbol<has greater precedence thann[s],
+which means 1[apple]<2[cat] can be transformed into 2[cat]1[apple]
+The symbol<has left-associative.
+E.g. 2[apple]<2[cat]<2[dog]->2[cat]2[apple]<2[dog]->2[cat]2[dog]2[apple]
+The inputs are always correct, you don't need to deal with the error case
+Please write a program to decrypt the cypher.
+
+Constraints:
+
+Do not use any libraries (vector, queue, stack…) 
+except for standard I/O and string(only allowed in HW1-2). 
+Please implement your own stack or queue using array if you needed.
+
+TAs will manually check your code after the deadline.
+
+
+Input
+In each test case, there are several lines of input cypher string C
+C consists of ASCII lowercase English letters, digits, '[' and ']' and '<'
+
+1 ≤ ∣C∣ ≤ 70
+For the operation n[s] in C, n∈[1,300]
+
+Output
+For each input, please show the decrypted message.
+
+Sample Input 1 
+
+babyshark5[d2[o]]
+2[hakunama2[ta]]
+2[peko]
+
+Sample Output 1
+
+babysharkdoodoodoodoodoo
+hakunamatatahakunamatata
+pekopeko
+
+
+Sample Input 2 
+
+3[2[na]<b<a] 
+2[lionh<2[go]akunam2[ta]<a] 
+2[1[ko]<1[pe]]
+
+Sample Output 2
+
+bananabananabanana
+liongogohakunamatataliongogohakunamatata
+pekopeko
+
+
+Sample Input 3 
+
+2[2[o]<2[ba2[y2[m]<uy]<2[a<n]]<gd]
+
+Sample Output 3
+
+bananayummyyummybananayummyyummygoodbananayummyyummybananayummyyummygood

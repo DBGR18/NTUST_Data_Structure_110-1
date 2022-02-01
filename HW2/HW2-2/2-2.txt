@@ -1,0 +1,99 @@
+Students' score management system
+Description
+
+The TAs have finally done correcting all the midterm exam papers, only one problem remains. 
+Since Data Structure is such an intriguing subject that everyone wants to study, 
+there are a great deal of students taking this course. Managing the students' score thus becomes a burden. 
+Fortunately, Hank designs a system to manage the scores with AVL tree. The system includes the following functions.
+
+Insertion: insert a number, I, to the AVL tree. Smaller numbers will be on the left. If there are duplicated numbers, 
+insert the latter one to the left subtree of the former one.
+
+Deletion: delete a number, D, from the AVL tree. If D has both left and right child nodes, 
+find the greatest number in the left subtree to replace D. If D has only one child node, 
+link the child node to its parent node. If D does not have any child node, simply eliminate D. 
+If duplicated Ds are found in the tree, eliminate the one nearest to the root.
+
+Print in preorder: traverse the AVL tree in preorder. The traversal should be noted in 
+format root(left__child_node()())(right_child_node()()).
+
+Print in inorder: traverse the AVL tree in inorder. The traversal should be noted in 
+format (()left__child_node())root(()right_child_node()).
+
+Print in postorder: traverse the AVL tree in postorder. The traversal should be noted in 
+format (()()left__child_node)(()()right_child_node)root.
+
+Please help Hank implement the system.
+
+
+Input
+Each test case contains one AVL tree only. The first line contains a positive integer N, 
+the number of nodes of the initial AVL tree, where 1 ≤ N ≤ 50000. 
+The second line contains N integers a_1, a_2, ... , a_n​​, which is the ordered list of the value of nodes in the AVL tree.
+Then, the test case contains M lines of commands, where 1 ≤ M ≤ 1000.
+
+I: The insertion command. The command is followed by an integer inputinput, the desired number to be inserted into the AVL tree. 
+Please insert inputinput into the AVL tree.
+
+D: The deletion command. The command is followed by an integer inputinput the desired number to be deleted from the AVL tree. 
+Please delete inputinput from the AVL tree.
+
+P: The print command. The command is followed by an integer input/in 1,2,3, referring to preorder, inorder, 
+and postorder traversal respectively. Please print the AVL tree in the corresponding format.
+
+Please note that the number of MM will not be given, so the program should stop automatically upon EOF is read.
+
+
+Output
+Please print the results of the corresponding command line by line.
+
+Sample Input 1 
+
+8
+63 9 19 27 18 108 99 81
+I 110
+I 5
+P 1
+
+Sample Output 1
+
+19(9(5()())(18()()))(99(63(27()())(81()()))(108()(110()())))
+
+
+Sample Input 2 
+
+8
+63 9 19 27 18 108 99 81
+P 2
+I 110
+D 99
+P 2
+
+Sample Output 2
+
+(()9(()18()))19((()27())63((()81())99(()108())))
+(()9(()18()))19(((()27())63())81(()108(()110())))
+
+
+Sample Input 3 
+
+8
+63 9 19 27 18 108 99 81
+P 3
+D 18
+I 100
+P 3
+
+Sample Output 3
+
+(()(()()18)9)((()()27)((()()81)(()()108)99)63)19
+((()()9)(()()27)19)((()()81)((()()100)()108)99)63
+
+
+Hint
+The problem worth 3pts and contains three test cases:
+
+(1pts)support insertion, deletion, and preorder traversal.
+(1pts)support insertion, deletion, and inorder traversal.
+(1pts)support insertion, deletion, and postorder traversal.
+There won't be any illegal inputs.

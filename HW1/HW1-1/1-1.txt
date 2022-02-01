@@ -1,0 +1,52 @@
+Shortest path of Maze
+Description
+
+After 魯拉拉 was acknowledged that 瓦基 took almost half of the flour, he felt he was tricked and betrayed.
+"No one can treat me as a fool!!" said 魯拉拉. He then ask his housekeepers to chase 瓦基 before he escape. 
+There are several rooms and aisles in 魯拉拉's house. 
+In order to leave the house as soon as possible, 瓦基 needs to find the shortest path.
+
+瓦基 got a map of 魯拉拉's house from a kind housekeeper.
+
+The size of map is N \times MN×M and represented by 4 kinds symbols(his current location, walls, aisles, and the door).
+瓦基 can only move up, down, left and right.
+Please help him to find out the number of "how many moves of shortest path" from his current location to the door.
+
+Constraints:
+
+Do not use any libraries (vector, queue, stack…) except for standard I/O. 
+Please implement your own stack or queue using array if you needed.
+
+TAs will manually check your code after the deadline.
+
+
+Input
+Each test case contains several inputs,each of which represents a maze. 
+The first line of an input contains two positive integer NN, MM, which means the number of rows and columns of the map, 
+where 1 \leq M, N \leq 1001≤M,N≤100. The next NN lines contains MM symbols which represent the map.
+
+.represents his current location
+#represents the wall
+*represents the aisles he can go through
+@represents the door
+
+Output
+For test case, please help him to find out the number of  
+"how many moves of shortest path" from his current location to the door.
+
+Sample Input 1 
+
+9 9
+#########
+#.******#
+#*#####*#
+#*******#
+##*#*####
+#**#*#**#
+#*##*##*#
+#*******#
+#######@#
+
+Sample Output 1
+
+13

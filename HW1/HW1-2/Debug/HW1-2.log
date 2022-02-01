@@ -1,0 +1,10 @@
+﻿  HW1-2.cpp
+D:\NTUST Courses\資料結構\HW1\HW1-2\HW1-2.cpp(16,22): warning C4018: '<': signed/unsigned mismatch
+D:\NTUST Courses\資料結構\HW1\HW1-2\HW1-2.cpp(57,29): warning C4018: '<': signed/unsigned mismatch
+D:\NTUST Courses\資料結構\HW1\HW1-2\HW1-2.cpp(64,29): warning C4018: '<': signed/unsigned mismatch
+D:\NTUST Courses\資料結構\HW1\HW1-2\HW1-2.cpp(69,31): warning C4018: '<': signed/unsigned mismatch
+D:\NTUST Courses\資料結構\HW1\HW1-2\HW1-2.cpp(79,34): warning C4018: '<': signed/unsigned mismatch
+D:\NTUST Courses\資料結構\HW1\HW1-2\HW1-2.cpp(111,22): warning C4018: '<': signed/unsigned mismatch
+D:\NTUST Courses\資料結構\HW1\HW1-2\HW1-2.cpp(146,28): warning C4018: '<': signed/unsigned mismatch
+D:\NTUST Courses\資料結構\HW1\HW1-2\HW1-2.cpp(160,21): warning C4018: '<': signed/unsigned mismatch
+  HW1-2.vcxproj -> D:\NTUST Courses\資料結構\HW1\Debug\HW1-2.exe
